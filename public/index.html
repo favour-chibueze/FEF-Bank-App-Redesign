@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank App</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="app">Loading...</div>
+    <!--     Login Page -->
+    <template id="login">
+      <h1>Bank App</h1>
+      <section>
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="login(event)">
+          <div class="form-input">
+          <label for="username">Username</label>
+          <input
+            id="username"
+            name="user"
+            type="text"
+            placeholder="your username here"
+          />
+          </div>
+          <div class="button-div">
+            <button>Login</button>
+          </div>
+        </form>
+      </section>
+      <section>
+          <h2>Register</h2>
+          <form id="registerForm" onsubmit="register(event)">
+           <div class="form-input">
+              <label for="user">Username (required)</label>
+            <input id="user" name="user" type="text" maxlength="20" required placeholder="choose a username">
+            </div>    
+            
+            <div class="form-input">
+            <label for="currency">Currency (required)</label>
+            <input id="currency" name="currency" required type="text" maxlength="5" value="$" >
+            </div>
+            
+            <div class="form-input">
+            <label for="description">Description</label>
+            <input id="description" name="description" type="text" maxlength="100" placeholder="type of account">
+            </div>
+            <div class="form-input">
+            <label for="balance">Current balance</label>
+            <input id="balance" name="balance" type="number" value="0">
+            </div>
+            <div class="button-div">
+            <button>Register</button>
+            </div>
+        </form>
+        </section>
+    </template>
+    <!--     Dashboard -->
+    <template id="dashboard">
+     <section>
+        <h2 data-bind="user"></h2>
+        <a href="/login" onclick="onLinkClick(event)">Logout</a>
+     </section>
+     <section>
+       <h2 data-bind="description"></h2>
+       Balance: <span data-bind="formattedBalance"></span><span data-bind="currency"></span>
+     </section>
+        <section>
+            <h2>Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Object</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </template>
+    
+    <template id="transaction">
+      <tr>
+        <td data-bind="date">?</td>
+        <td data-bind="object">?</td>
+        <td data-bind="amount">?</td>
+      </tr>
+    </template>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>

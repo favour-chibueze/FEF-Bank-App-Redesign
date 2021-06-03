@@ -1,0 +1,22 @@
+{
+  "name": "bank-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favour-chibueze/FEF-Bank-App-Redesign.git"
+  },
+  "author": "Favour Chibueze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/favour-chibueze/FEF-Bank-App-Redesign/issues"
+  },
+  "homepage": "https://github.com/favour-chibueze/FEF-Bank-App-Redesign#readme"
+}
