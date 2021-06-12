@@ -2,7 +2,7 @@
 
 :root {
   /* Colors */
-  --primary: #F0F7FF;
+  --primary: #f0f7ff;
   --primary-light: #7bbde6;
   --accent: #546e7a;
   --grey: #445;
@@ -109,16 +109,16 @@ button {
   display: inline;
   height: 40px;
   box-shadow: 0px 3px 6px #2c28281c;
-  border: 1px solid #046B5E;
+  border: 1px solid #046b5e;
   border-radius: 5px;
   opacity: 1;
-  color: #046B5E;
+  color: #046b5e;
 }
 
 a:hover,
 button:hover {
   color: var(--primary);
-  background: #046B5E;
+  background: #046b5e;
   cursor: pointer;
 }
 
@@ -152,4 +152,37 @@ input {
 .button-div {
   text-align: center;
   margin-top: 21px;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    margin: 24px 28px;
+    padding: 0;
+  }
+  .form-input {
+    padding: 2px 23px;
+    display: block;
+    margin-top: var(--space-md);
+    text-align: left;
+  }
+  input {
+    width: 100%;
+    margin-top: 9px;
+  }
+  h1 {
+    padding-top: var(--space-xl);
+  }
+  button {
+    width: 85%;
+  }
+  .dashbord-logout {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: inherit;
+    padding: 15px 10px;
+    align-items: center;
+  }
+  .dashbord-logout a {
+    margin: 0;
+  }
 }
