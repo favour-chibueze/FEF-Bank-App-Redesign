@@ -62,10 +62,45 @@
         <h2 data-bind="user"></h2>
         <a href="/login" onclick="onLinkClick(event)">Logout</a>
      </section>
-     <section>
+     <section class="dashbord-logout">
        <h2 data-bind="description"></h2>
        Balance: <span data-bind="formattedBalance"></span><span data-bind="currency"></span>
      </section>
+     <section>
+      <button class="w-50" id="myBtn" onclick="addTransaction(event)">
+        Add Transaction
+      </button>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" onclick="closeModal(event)">&times;</span>
+          <form id="createTransaction" onsubmit="submitTransactionForm(event)">
+            <div class="form-input">
+              <label for="date">Date</label>
+              <input name="date" type="date" placeholder="select date" />
+            </div>
+            <div class="form-input">
+              <label for="object">Object</label>
+              <input
+                name="object"
+                type="Text"
+                placeholder="type object here"
+              />
+            </div>
+            <div class="form-input">
+              <label for="amount">Amount</label>
+              <input name="amount" type="number" placeholder="" />
+            </div>
+            <div class="margin">
+              <button>
+                Ok
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
         <section>
             <h2>Transactions</h2>
             <table>
@@ -83,6 +118,7 @@
     
     <template id="transaction">
       <tr>
+        <td data-bind="id" class="d-none">?</td>
         <td data-bind="date">?</td>
         <td data-bind="object">?</td>
         <td data-bind="amount">?</td>

@@ -112,6 +112,7 @@ router.delete('/accounts/:user', (req, res) => {
 
 // Add a transaction to a specific account
 router.post('/accounts/:user/transactions', (req, res) => {
+  console.log(req.body)
   const account = db[req.params.user];
 
   // Check if account exists
